@@ -36,13 +36,14 @@ class ColorHandlerNightLight : public ColorHandler {
     // This night light mode is activated when white light is selected.
     // Based on measurements using the original device firmware, so it
     // matches the night light of the original firmware.
+   // The higher the value, the more the LED channel is dimmed.
     if (v.get_color_mode() == light::ColorMode::COLOR_TEMPERATURE) {
     //  red = 0.968f;
     //  green = 0.968f;
      //change values in order to enable night light in non-working bslamp2
-      red = 0.958f;
-      green = 0.958f;
-      blue = 0.964f;
+      red = 0.858f;
+      green = 0.858f;
+      blue = 0.864f;
       white = 0.0f;
     }
     // In RGB mode, the selected color is used to give the night light a
