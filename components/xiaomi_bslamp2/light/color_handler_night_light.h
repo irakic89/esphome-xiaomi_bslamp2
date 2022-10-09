@@ -40,8 +40,9 @@ class ColorHandlerNightLight : public ColorHandler {
     if (v.get_color_mode() == light::ColorMode::COLOR_TEMPERATURE) {
     // red = 0.968f; 
       red = 0.960f; //temperature
-      green = 0.972f;
-      blue = 0.972f;
+    // green = 0.972f;
+      green = 0.960f;
+      blue = 0.964f;
       white = 0.0f;
     }
     // In RGB mode, the selected color is used to give the night light a
@@ -49,9 +50,9 @@ class ColorHandlerNightLight : public ColorHandler {
     // this firmware, as the original firmware does not support it.
     else {
       red = esphome::lerp(v.get_red(), 0.9997f, 0.960f);
-      green = esphome::lerp(v.get_green(), 0.9997f, 0.9680f);
+      green = esphome::lerp(v.get_green(), 0.9997f, 0.960f);
       auto blue_scale = (v.get_red() + v.get_green()) / 2.0f;
-      auto blue_max = esphome::lerp(blue_scale, 0.9640f, 0.9720f);
+      auto blue_max = esphome::lerp(blue_scale, 0.9640f, 0.9640f);
       blue = esphome::lerp(v.get_blue(), 0.9997f, blue_max);
       white = 0.0f;
     }
