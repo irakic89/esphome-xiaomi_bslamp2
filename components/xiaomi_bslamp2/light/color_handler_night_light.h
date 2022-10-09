@@ -40,9 +40,9 @@ class ColorHandlerNightLight : public ColorHandler {
     //  red = 0.968f;
     //  green = 0.968f;
      //change values in order to enable night light in non-working bslamp2
-      red = 0.960f;
-      green = 0.960f;
-      blue = 0.972f;
+      red = 0.958f;
+      green = 0.958f;
+      blue = 0.964f;
       white = 0.0f;
     }
     // In RGB mode, the selected color is used to give the night light a
